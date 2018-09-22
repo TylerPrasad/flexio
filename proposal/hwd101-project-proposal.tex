@@ -1,36 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% University Assignment Title Page 
-% LaTeX Template
-% Version 1.0 (27/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-% 
-% Instructions for using this template:
-% This title page is capable of being compiled as is. This is not useful for 
-% including it in another document. To do this, you have two options: 
-%
-% 1) Copy/paste everything between \begin{document} and \end{document} 
-% starting at \begin{titlepage} and paste this into another LaTeX file where you 
-% want your title page.
-% OR
-% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
-% move this file to the same directory as the LaTeX file you wish to add it to. 
-% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
-% title page.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\title{Title page with logo}
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[12pt]{article}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -49,26 +16,17 @@
 
 \center % Center everything on the page
  
-%----------------------------------------------------------------------------------------
-%	HEADING SECTIONS
-%----------------------------------------------------------------------------------------
+% Heading
+\textsc{\LARGE Seneca College}\\[1.5cm]
+\textsc{\Large School of Information and Communications Technology}\\[0.5cm]
+\textsc{\large PC Hardware I}\\[0.5cm]
 
-\textsc{\LARGE Seneca College}\\[1.5cm] % Name of your university/college
-\textsc{\Large School of Information and Communications Technology}\\[0.5cm] % Major heading such as course name
-\textsc{\large Computer Systems Technology}\\[0.5cm] % Minor heading such as course title
-
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
-
+% Title
 \HRule \\[0.4cm]
 { \huge \bfseries Project Proposal}\\[0.4cm] % Title of your document
 \HRule \\[1.5cm]
  
-%----------------------------------------------------------------------------------------
-%	AUTHOR SECTION
-%----------------------------------------------------------------------------------------
-
+% Author
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
@@ -80,8 +38,6 @@ Mackenzie \textsc{Hodd}
 ~
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
-%\emph{Supervisor:} \\
-%Dr. James \textsc{Smith} % Supervisor's Name
 \end{flushright}
 \end{minipage}\\[2cm]
 
@@ -94,6 +50,7 @@ Mackenzie \textsc{Hodd}
 \end{titlepage}
 
 
+% Begin body of article
 \begin{abstract}
 Proposal for the HWD101 Group Project.	
 \end{abstract}
@@ -106,5 +63,11 @@ Proposal for the HWD101 Group Project.
 Jiuxiang Lin & 124462185 & jlin164@myseneca.ca & Tech \\\hline
 Nischay & 123456789 & nischay@myseneca.ca & Presenter \\\hline
 \end{tabular}
+
+\section{Project Introduction}
+
+\begin{center}
+\includegraphics[scale=0.6]{topology.png}\\[1cm]
+\end{center}
 
 \end{document}
