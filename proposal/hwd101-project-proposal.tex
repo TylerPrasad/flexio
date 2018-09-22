@@ -5,9 +5,6 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 
-% quote block
-\usepackage{csquotes}
-
 \begin{document}
 
 \begin{titlepage}
@@ -64,10 +61,51 @@ Jiuxiang Lin & 124462185 & jlin164@myseneca.ca & Tech \\\hline
 Nischay & 123456789 & nischay@myseneca.ca & Presenter \\\hline
 \end{tabular}
 
-\section{Project Introduction}
+\section{Introduction}
+
+As we move into the new era of technology, the demand of security, accessibility and convenience is getting higher and higher. Enterprise class solutions are very capable with outstanding quality. However, as an ordinary Internet user, it is very had for an individual to afford the enterprise grade services.
+
+\vfill
+
+\section{Topology Design}
+
+\subsection{Option 1}
+
+The raspberry pi will have the following roles on the network:
+
+\begin{enumerate}
+\item OpenConnect Server
+\item Pi-Hole
+\item FreeRADIUS
+\end{enumerate}
 
 \begin{center}
 \includegraphics[scale=0.6]{topology.png}\\[1cm]
 \end{center}
+
+\subsection{Option 2}
+
+The raspberry pi will have the following roles on the network:
+
+\begin{enumerate}
+\item OpenConnect Server
+\item Pi-Hole
+\item FreeRADIUS
+\item Router
+\item DHCP Server
+\end{enumerate}
+
+\section{Materials Needed}
+
+The follow is a list of all the components and devices that are expected to be used in this project. Some of these devices are enterprise level devices. They are used not because this project require excessive computing power nor throughput. They are used since Jiuxiang Lin is already in possession of these devices.
+
+\begin{enumerate}
+\item Raspberry pi
+\item Cisco C819G (Router)
+\item Cisco WS-C3750 (Swich)
+\item Laptop / Smart phone (as terminal devices)
+\item Ethernet cables
+\item Other minor accessories
+\end{enumerate}
 
 \end{document}
