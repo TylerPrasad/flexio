@@ -28,8 +28,6 @@
 \begin{flushleft} \large
 \emph{Author:}\\
 Jiuxiang (Leon) \textsc{Lin}
-Nischay \textsc{LASTNAME}
-Mackenzie \textsc{Hodd}
 \end{flushleft}
 \end{minipage}
 ~
@@ -63,49 +61,83 @@ Nischay & 123456789 & nischay@myseneca.ca & Presenter \\\hline
 
 \section{Introduction}
 
-As we move into the new era of technology, the demand of security, accessibility and convenience is getting higher and higher. Enterprise class solutions are very capable with outstanding quality. However, as an ordinary Internet user, it is very had for an individual to afford the enterprise grade services.
+\subsection{The Issue}
+As we move into the new era of technology, the demand of security, accessibility and convenience is getting higher and higher.
+
+For example, imagine this. You're on vacation on another side of the world, but your boss suddenly calls you from the corporate office, and orders you to send him the contract file that you left in the desktop PC at home. If you don't send this important file, your company loses one crucial client that the company has been working with for months. The boss is going to be mad as the company wasted months for nothing, and you're going to lose your job. However, if you do decide to send him the files, you'll have to catch a flight all the way back to Canada, which means that your vacation is puffed into bubbles of nothingness.
+
+What if there's another way of doing this? What if you can just access your computer from wherever you are? This is where VPN technology comes into the show. With VPN, which stands for Virtual Private Network, you can establish a secured tunnel back to your home, as if you are physically at home connected to your AP. Doesn't this make things much easier?
+
+To fulfill demands and needs like this, companies like Cisco, Juniper Network and Huawei provide enterprise-level solutions that are secure, reliable and scalable. However, it is hard for home users to enjoy convenience like this, since the solutions for enterprises have sky-high prices that an ordinary individual simply cannot afford.
+
+\subsection{Our Solution}
+
+To make the Internet experience more convenient, comfortable and secure, we want to build our own cost-effective yet secure and reliable solution for normal individual Internet users. With this project, only a Raspberry Pi is needed for most of the benefits and convenience of enterprise solutions to come to your home.
+
+In our design, the Raspberry Pi will play the role of a VPN gateway, a RADIUS server, a DNS advertisement filtering server. There will be even more features added into the mix that can further more enhance the user experience of this affordable networking solution.
 
 \vfill
 
 \section{Topology Design}
 
-\subsection{Option 1}
+\subsection{Option 1: Network and Security Appliance}
 
-The raspberry pi will have the following roles on the network:
+The Raspberry Pi will have the following roles on the network:
 
 \begin{enumerate}
-\item OpenConnect Server
-\item Pi-Hole
-\item FreeRADIUS
+\item VPN Gateway
+\item DNS Advertisement Filtering Server
+\item RADIUS Server
 \end{enumerate}
 
 \begin{center}
 \includegraphics[scale=0.6]{topology.png}\\[1cm]
 \end{center}
 
-\subsection{Option 2}
+\subsection{Option 2: Multipurpose Gateway}
 
 The raspberry pi will have the following roles on the network:
 
 \begin{enumerate}
-\item OpenConnect Server
-\item Pi-Hole
-\item FreeRADIUS
+\item VPN Gateway
+\item DNS Advertisement Filtering Server
+\item RADIUS Server
 \item Router
 \item DHCP Server
 \end{enumerate}
 
 \section{Materials Needed}
 
-The follow is a list of all the components and devices that are expected to be used in this project. Some of these devices are enterprise level devices. They are used not because this project require excessive computing power nor throughput. They are used since Jiuxiang Lin is already in possession of these devices.
+The follow is a list of all the devices, component and software that are expected to be used in this project. Italic items are only applicable for option 2, when the AP and Gateway are integrated into the Raspberry Pi.
+
+\subsection{Hardware}
+
+Note that some of these devices are enterprise level devices. They are used throughly because \textit{Jiuxiang Lin}, a group member, is already in possession of these devices.\\
+
+\begin{tabular}{| c | c |}
+\hline
+\textbf{Name} & \textbf{Quantity} \\\hline
+Raspberry Pi 3 B+ & 1 \\\hline
+Cisco C819G-4G-V-K9 & 1 \\\hline
+Cisco WS-C3750V2-48TS-S Catalyst & 1 \\\hline
+Laptop / Smart phone (as terminal devices) & As many as needed \\\hline
+Ethernet cables & As many as needed \\\hline
+Other minor accessories & Unknown \\\hline
+\end{tabular}
+
+\subsection{Software}
+
+There are a number of software that we need to use for this project. To follow the thesis of this project, we try as much as we can to make use of free and open-source software.
+
+Most of these software are expected to be pre-compiled by the Linux distribution package maintainers. Therefore it would be easy for beginners to install these packages on themselves.
 
 \begin{enumerate}
-\item Raspberry pi
-\item Cisco C819G (Router)
-\item Cisco WS-C3750 (Swich)
-\item Laptop / Smart phone (as terminal devices)
-\item Ethernet cables
-\item Other minor accessories
+\item ocserv
+\item pi-hole
+\item freeradius
+\item anyradius (to be compiled)
+\item \textit{hostapd}
+\item \textit{isc-dhcp-server}
 \end{enumerate}
 
 \end{document}
